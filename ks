@@ -29,7 +29,7 @@ class KubeSwitcher:
 				all_names.append(k_name)
 		matched_contexts_len = len(all_names)
 		if matched_contexts_len > 1:
-			print(f"There are multiple Kubernetes Cluster exists with {name} \n choose one of the below \n")
+			print(f"There are multiple Kubernetes Cluster exists with {self.firstArg} \n choose one of the below \n")
 			for i in range(matched_contexts_len):
 				print(f"{i} {all_names[i]}")
 			s_no = int(input("Enter the number of the Cluster you want to switch : "))
