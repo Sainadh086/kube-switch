@@ -26,31 +26,19 @@
 ### update the kubeconfig
     - ks update -n <fullname of the EKS> -r <region> -p <aws-profile>
     example:
-    - ks update -n ap-southeast-1-eks-cluster -r ap-southeast-1 -p solstage
+    - ks update -n ap-southeast-1-eks-cluster -r ap-southeast-1 -p dev
     note: by default -r is us-west-1
 
 ### list the EKS clusters
     - ks list -r <region> -p <aws-profile>
     example:
-    - ks list -r ap-southeast-1-eks-cluster -p solstage
+    - ks list -r ap-southeast-1-eks-cluster -p dev
 
 ### view the current EKS cluster
     - ks current
-
-### sync the aws credentials
-    - ks sync
 
 ### ks neat to remove the unwanted fields from k8s manifest files
     - kubectl get deploy nginx -oyaml | ks neat
 
 ### ks decrypt can be used to decrypt the secrets in kubernetes secrets
     - kubectl get -n spark-jobs secrets common-secret -oyaml | ks decyrpt
-
-### ks apply can be used to create/update secretmanager and route53
-    - ks apply -f <filename>
-    Examples are available in examples folder
-
-### ks generate -> it will fetch kafka certs from the cluster
-    - ks generate
-    By default it will take kafka namespace, if you want to specify specific namespace
-    - ks generate -n kafka-qa
