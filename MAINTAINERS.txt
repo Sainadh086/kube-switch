@@ -1,0 +1,5 @@
+# Maintainers for kube-switch project
+
+1. **Sainadh** (Lead Maintainer)
+   - GitHub: https://github.com/Sainadh086
+   - Responsibilities: General project management, code reviews, bug management, feature requests.
