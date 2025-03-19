@@ -20,7 +20,7 @@ class KubeSwitcher:
 			with open(f"/home/{user}/.kube/config", "r") as f:
 				kube = yaml.load(f, Loader=yaml.FullLoader)
 		
-		context = kube["clust3016ers"]
+		context = kube["clusters"]
 		n = len(context)
 		all_names = []
 		for i in range(n):
