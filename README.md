@@ -22,8 +22,8 @@
 
     - ks <clustername> 
     example:
-    - ks ipm
-    it will list all the clusters with novartis name from your kubeconfig
+    - ks kube
+    it will list all the clusters with kube name from your kubeconfig
 
 ### update the kubeconfig
     - ks update -n <fullname of the EKS> -r <region> -p <aws-profile>
