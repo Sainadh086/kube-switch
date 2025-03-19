@@ -1,19 +1,21 @@
 # KS 
 
 ### Getting started with ks cli
-    copy the ks to /usr/local/bin/
+    Install ks cli with below commands
     cmd:
-        - sudo cp ks /opt/homebrew/bin/ks
+        - git clone <repoUrl>
+        - cd kube-switch
+        - bash install.sh
     requirements:
         - pip install PyYAML
 
-    Add the below lines in .zshrc file
-
+    To see your EKS cluster names in cli, you can add the below lines to .bashrc file.
     ---
     k1=$(kubectl config current-context | awk -F'/' '{print $2}')
     PROMPT2=$PROMPT
     PROMPT='$(echo $k1)'$PROMPT2
     ---
+    Note:- This cli only runs on Linux and MacOS, please post the bugs on github issues.
 
 
 ### Switch between EKS clusters
